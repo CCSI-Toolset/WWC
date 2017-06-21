@@ -1,0 +1,72 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      alpha;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    leftWall	
+    {
+	type constantAlphaContactAngle;
+	theta0 40; //contact angle
+	limit gradient;
+	value uniform 0;
+    }
+
+    rightWall
+    {
+        type            zeroGradient;
+    }
+
+    lowerWall
+    {
+        type            zeroGradient;
+    }
+	
+    upperWall
+    {
+        type            zeroGradient;
+    }
+
+    upperLiquidInlet
+    {
+	type		fixedValue;
+	value 		uniform 1.0; //solvent inlet volume fraction
+    }
+
+    lowerLiquidOutlet
+    {
+	type		zeroGradient;
+    }
+    upperGasOutlet
+    {
+	type		zeroGradient;
+    }
+    lowerGasInlet
+    {
+	type		fixedValue;
+	value		uniform 0.0; //gas inlet volume fraction
+    }
+
+    defaultFaces
+    {
+        type            empty;
+    }
+}
+
+// ************************************************************************* //

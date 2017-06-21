@@ -1,0 +1,6 @@
+# 1 "files"
+# 1 "<command-line>"
+# 1 "files"
+interFoam.C
+
+EXE = $(FOAM_APPBIN)/interFoam

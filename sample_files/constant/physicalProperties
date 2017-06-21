@@ -1,0 +1,33 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      physicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+D1L       D1L [ 0 2 -1 0 0 0 0 ] 1.0e-9; //gas diffusivity in solvent
+
+D2L       D2L [ 0 2 -1 0 0 0 0 ] 1.0e-9; //MEA diffusivity in solvent
+
+D3L       D3L [ 0 2 -1 0 0 0 0 ] 1.0e-9; // RNHCOO diffusivity in solvent
+
+D1G       D1G [ 0 2 -1 0 0 0 0 ] 1.6e-5; // gas diffusivity in gas
+
+D2G       D1G [ 0 2 -1 0 0 0 0 ] 0.0; // MEA diffusivity in gas
+
+D3G       D1G [ 0 2 -1 0 0 0 0 ] 0.0; //RNHCOO diffusivity in gas
+
+RConst1	  RConst1 [0 3 -1 0 -1 0 0] 5.9178; //reactive costant
+
+Henry_const	Henry_const [0 0 0 0 0 0 0] 2.1418; //reciprocal of the original calculated Henry's constant
+// ************************************************************************* //

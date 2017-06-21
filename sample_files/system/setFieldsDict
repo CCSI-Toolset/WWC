@@ -1,0 +1,44 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      setFieldsDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+defaultFieldValues
+(
+    volScalarFieldValue alpha1 0
+    volScalarFieldValue c_CO2 0.1	// initial condition of gas concentration
+    volScalarFieldValue c_RNH2 0
+    volScalarFieldValue c_RNHCOO 0
+);
+
+regions
+(
+    boxToCell
+    {
+        box (0 0.08 -1) (0.001 0.1 2); 
+
+/*        box (0 0.0 -1) (0.0003 0.1 2); */
+
+        fieldValues
+        (
+            volScalarFieldValue alpha1 1
+            volScalarFieldValue c_CO2 0
+            volScalarFieldValue c_RNH2 1000.0	//initial condition of solvent concentration
+        );
+    }
+);
+
+
+// ************************************************************************* //
