@@ -1,6 +1,8 @@
 # WWC: OpenFOAM Wetted Wall Simulation Package
 A CFD model developed to simulate the hydrodynamics of falling film in wetted wall column, coupled with mass transfer and absorption of gas species.
 
+Note: this product is also part of the [CFDModels_bundle](../../../CFDModels_bundle)
+
 ## Getting Started
 See installation and user guide documents in the [docs](docs) subdirectory.
 
@@ -21,7 +23,7 @@ See also the list of [contributors](../../contributors) who participated in this
 
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, 
-[releases](../../releases) or [tags](../..//tags) on this repository. 
+[releases](../../releases) or [tags](../../tags) on this repository. 
 
 ## License & Copyright
 See [LICENSE.md](LICENSE.md) file for details
